@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Outfit, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../public/static/Outfit-Black.ttf');
+    src: url('../public/static/Outfit-Medium.ttf');
+    src: url('../public/static/Outfit-Regular.ttf');
+}
+
+.container{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+

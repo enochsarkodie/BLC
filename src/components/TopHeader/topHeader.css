@@ -1,0 +1,77 @@
+.top-header {
+  background: white;
+  box-shadow: 0 0 8px rgba(4, 83, 163, 0.2);
+  color: #000;
+  font-size: 14px;
+  padding: 18px 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-header-left {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.top-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.top-header-right {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.top-header-right a {
+  color: #2b3a7b;
+  transition: color 0.3s;
+  font-size: 14px;
+}
+
+.top-header-right a:hover { color: #0e2798; }
+
+.top-header-icons {
+  font-size: 15px;
+  color: #1586f5;
+  flex-shrink: 0;
+}
+
+.header-phone { font-weight: 800; }
+
+
+/* ── TABLET (hide working hours, tighten padding) ── */
+@media (max-width: 1024px) {
+  .top-header {
+    padding: 12px 32px;
+  }
+  /* hide the hours item on tablet — too cramped */
+  .top-item:last-child {
+    display: none;
+  }
+}
+
+/* ── SMALL TABLET (hide phone number too, keep email) ── */
+@media (max-width: 768px) {
+  .top-header {
+    padding: 10px 20px;
+  }
+  /* keep only email + socials */
+  .top-item:not(:first-child) {
+    display: none;
+  }
+}
+
+/* ── MOBILE (hide entire top bar) ── */
+@media (max-width: 540px) {
+  .top-header {
+    display: none;
+  }
+}

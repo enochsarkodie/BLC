@@ -1,0 +1,213 @@
+/* ══════════════════════════════════════
+   SECTION WRAPPER
+══════════════════════════════════════ */
+.testimonial {
+  position: relative;
+  padding: 60px 80px 48px;
+  background: #f7f4ef;
+  overflow: hidden;
+}
+
+.testimonial-eyebrow {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin: 0 0 10px;
+}
+
+.testimonial h1 {
+  text-align: center;
+  font-weight: 800;
+  color: #25618f;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  margin: 0 0 40px;
+}
+
+/* ══════════════════════════════════════
+   SLIDER WRAPPER — arrows + track
+══════════════════════════════════════ */
+.testimonial-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ── ARROW BUTTONS ── */
+.next-btn,
+.back-btn {
+  flex-shrink: 0;
+  font-size: 22px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #25618f;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(37,97,143,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  z-index: 2;
+}
+.next-btn:hover,
+.back-btn:hover {
+  background: #25618f;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* ── TRACK ── */
+.slider {
+  flex: 1;
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  width: 200%;           /* 4 slides, 2 visible = 200% */
+  transition: transform 0.5s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.slider ul li {
+  list-style: none;
+  width: 25%;            /* each li = 1/4 of the 200% ul = 50% of viewport */
+  padding: 10px 14px;
+  box-sizing: border-box;
+}
+
+/* ══════════════════════════════════════
+   SLIDE CARD
+══════════════════════════════════════ */
+.slide {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  padding: 32px 28px 28px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #676767;
+  line-height: 1.7;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid #25618f;
+}
+
+.slide-quote {
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  color: #25618f;
+  opacity: 0.15;
+  line-height: 0.8;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.slide > p {
+  flex: 1;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0 0 24px;
+  line-height: 1.75;
+}
+
+/* ── USER INFO ── */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #f0ebe0;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.slide img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #25618f;
+  flex-shrink: 0;
+}
+
+.user-info h3 {
+  color: #25618f;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 3px;
+}
+
+.user-info span {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* ══════════════════════════════════════
+   DOTS
+══════════════════════════════════════ */
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.testimonial-dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(37,97,143,0.25);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, width 0.3s;
+}
+.testimonial-dot.active {
+  background: #25618f;
+  width: 24px;
+  border-radius: 6px;
+  transform: none;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .testimonial { padding: 52px 40px 40px; }
+}
+
+@media (max-width: 768px) {
+  .testimonial { padding: 48px 24px 36px; }
+  .next-btn, .back-btn { width: 38px; height: 38px; font-size: 18px; }
+  .slide { padding: 24px 20px; }
+}
+
+/* Mobile — 1 slide visible */
+@media (max-width: 640px) {
+  .testimonial { padding: 40px 16px 32px; }
+
+  /* 1 slide at a time: ul is 400% wide, each li is 25% of that = 100% visible */
+  .slider ul {
+    width: 400%;
+  }
+  .slider ul li {
+    width: 25%;             /* 25% of 400% = 100% viewport */
+    padding: 6px 4px;
+  }
+
+  .next-btn, .back-btn { width: 34px; height: 34px; font-size: 16px; }
+  .testimonial-slider-wrap { gap: 8px; }
+
+  .slide-quote { font-size: 3rem; }
+  .slide > p   { font-size: 0.9rem; }
+}
+
+@media (max-width: 380px) {
+  .next-btn, .back-btn { display: none; }   /* rely on dots only on tiny screens */
+  .testimonial-slider-wrap { gap: 0; }
+}

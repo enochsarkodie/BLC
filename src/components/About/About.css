@@ -1,0 +1,222 @@
+/* ══════════════════════════════════════
+   HEADER
+══════════════════════════════════════ */
+.about-header {
+  overflow-x: hidden;
+}
+
+.about-header h1 {
+  padding: 48px 24px 8px;
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: 0.08em;
+}
+
+.about-header a {
+  color: #25618fd8;
+}
+
+/* ══════════════════════════════════════
+   MAIN LAYOUT
+══════════════════════════════════════ */
+.about {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  padding: 30px 0;
+  margin: 48px auto 80px;
+  gap: 56px;
+}
+
+/* ══════════════════════════════════════
+   LEFT — IMAGE
+══════════════════════════════════════ */
+.about-left {
+  flex: 0 0 42%;
+}
+
+.about-img-wrap {
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.about-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.about-img-wrap:hover img {
+  transform: scale(1.03);
+}
+
+/* ══════════════════════════════════════
+   RIGHT — TEXT
+══════════════════════════════════════ */
+.about-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* eyebrow label */
+.about-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 14px;
+}
+
+.about-right h3 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  width: 100%;
+  margin: 0 0 24px;
+  color: #0a192f;
+}
+
+.about-right p {
+  color: #444;
+  line-height: 1.85;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  text-align: justify;
+}
+
+.about-right p:last-of-type {
+  margin-bottom: 28px;
+}
+
+/* ── CTA BUTTON ── */
+.btn-position {
+  margin-top: 8px;
+}
+
+.about-button,
+.about-button:link,
+.about-button:visited {
+  padding: 12px 22px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  background: #25618f;
+  color: whitesmoke;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.25s, transform 0.2s;
+  border: none;
+  text-decoration: none;
+}
+
+.about-button:hover {
+  background: #1f4968;
+  color: whitesmoke;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.about-button:active {
+  color: whitesmoke;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+
+/* Large tablet — tighten gap, shorter image */
+@media (max-width: 1024px) {
+  .about {
+    gap: 40px;
+    width: 92%;
+  }
+  .about-img-wrap {
+    height: 480px;
+  }
+}
+
+/* Tablet — stack vertically */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    gap: 36px;
+    margin: 32px auto 60px;
+    width: 92%;
+  }
+
+  .about-left {
+    flex: none;
+    width: 100%;
+  }
+
+  .about-img-wrap {
+    height: 380px;
+  }
+
+  .about-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about-right h3 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+  .about-header h1 {
+    padding: 36px 20px 4px;
+    font-size: 1.6rem;
+  }
+
+  .about {
+    width: 100%;
+    padding: 0 20px;
+    margin: 24px auto 48px;
+    gap: 28px;
+  }
+
+  .about-img-wrap {
+    height: 300px;
+    border-radius: 3px;
+  }
+
+  .about-right h3 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+
+  .about-right p {
+    font-size: 0.93rem;
+    line-height: 1.75;
+  }
+
+  .about-button {
+    font-size: 0.88rem;
+    padding: 11px 18px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .about-img-wrap { height: 260px; }
+  .about-right h3 { font-size: 1.25rem; }
+}

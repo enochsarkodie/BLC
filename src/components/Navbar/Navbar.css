@@ -1,0 +1,201 @@
+/* ══════════════════════════════════════
+   NAVBAR BASE
+══════════════════════════════════════ */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 10;
+  left: 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  padding: 10px 55px;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+
+.dark-nav {
+  background: rgba(1, 20, 38, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  top: 0;
+}
+
+/* ── LOGO ── */
+.nav-logo img {
+  width: 70px;
+  display: block;
+}
+
+/* ── DESKTOP LINKS ── */
+.nav-item {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
+}
+
+.nav-item li {
+  display: inline-block;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: color 0.25s, background 0.25s;
+}
+
+.nav-item li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.25s;
+}
+.nav-item li a:visited { color: white; }
+.nav-item li:hover,
+.nav-item li:hover a { color: #7ec8d4; }
+.nav-item li a:focus,
+.nav-item li a:active { outline: none; }
+
+/* ── CTA BUTTON ── */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  background: #25618f;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  white-space: nowrap;
+  border: none;
+}
+.btn:hover {
+  background: #1f4968;
+  transform: translateY(-1px);
+}
+
+.nav-right-icon { font-size: 20px; }
+
+/* ── HAMBURGER (hidden on desktop) ── */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  transition: color 0.25s;
+  z-index: 1100;
+}
+.nav-hamburger:hover { color: #7ec8d4; }
+
+/* ══════════════════════════════════════
+   MOBILE DRAWER
+══════════════════════════════════════ */
+.nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: min(300px, 80vw);
+  height: 100vh;
+  background: rgba(1, 20, 38, 0.98);
+  backdrop-filter: blur(16px);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 36px 40px;
+  gap: 8px;
+  transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-drawer--open { right: 0; }
+
+.nav-drawer-links {
+  list-style: none;
+  margin: 0 0 36px;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-drawer-links li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nav-drawer-links li:last-child { border-bottom: none; }
+.nav-drawer-links li:hover {
+  background: rgba(255,255,255,0.07);
+  color: #7ec8d4;
+}
+
+.nav-drawer-links li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.nav-drawer-links li a:visited { color: inherit; }
+
+.nav-drawer-btn {
+  width: 100%;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 0.9rem;
+}
+
+/* ── OVERLAY ── */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+  backdrop-filter: blur(2px);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+══════════════════════════════════════ */
+
+/* Tablet — tighten padding, slightly smaller links */
+@media (max-width: 1024px) {
+  .navbar { padding: 10px 32px; }
+  .nav-item li { padding: 8px 10px; font-size: 0.85rem; }
+  .btn { font-size: 0.8rem; padding: 9px 14px; }
+}
+
+/* Hide desktop nav, show hamburger */
+@media (max-width: 768px) {
+  .navbar { padding: 12px 24px; }
+  .nav-item  { display: none; }
+  .nav-right { display: none; }
+  .nav-hamburger { display: flex; }
+  .nav-logo img { width: 60px; }
+}
+
+@media (max-width: 480px) {
+  .navbar { padding: 10px 16px; }
+  .nav-logo img { width: 52px; }
+}

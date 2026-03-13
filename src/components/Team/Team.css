@@ -1,0 +1,193 @@
+/* ══════════════════════════════════════
+   TEAM SECTION HEADER
+══════════════════════════════════════ */
+.team-header {
+  text-align: center;
+  padding: 72px 24px 48px;
+  position: relative;
+}
+
+/* subtle decorative line above */
+.team-header::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: #c9a84c;
+  margin: 0 auto 20px;
+  border-radius: 2px;
+}
+
+.team h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #0a192f;
+  margin: 0 0 6px;
+  line-height: 1.15;
+}
+
+.team h1 a {
+  color: #25618f;
+  font-style: italic;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* ornamental rule below heading */
+.team-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px auto 20px;
+  width: fit-content;
+}
+
+.team-rule::before,
+.team-rule::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a84c);
+}
+
+.team-rule::after {
+  background: linear-gradient(90deg, #c9a84c, transparent);
+}
+
+.team-rule-diamond {
+  width: 6px;
+  height: 6px;
+  background: #c9a84c;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.team p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 300;
+  color: #676767;
+  letter-spacing: 0.04em;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 540px) {
+  .team-header { padding: 52px 20px 36px; }
+  .team-rule::before,
+  .team-rule::after { width: 40px; }
+}
+.client {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+.card img{
+    width: 100%;  
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+} 
+.card::before {
+  content: "";
+  color: white;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 10, 35, 0.7),
+    rgba(0, 10, 35, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.client-content{
+    padding: 10px 16px;
+    text-align: center;
+    margin: 15px 15px;
+}
+
+.client-content h2 {
+  color: #f5f5f5;
+}
+
+.client-content p {
+  color: #e6e6e6;
+}
+
+.client-content {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.card:hover .client-content {
+  transform: translateY(0);
+  opacity: 1;
+  color: whitesmoke;
+
+}
+.team-btn,
+.team-btn:link,
+.team-btn:visited{
+    padding: 10px 15px;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    background: #067789;
+    color: whitesmoke;
+    border-radius: 18px;
+    font-size: 18px;
+    padding-left: 13px;
+    transition: 0.2s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.team-button {
+     margin-top: 40px; 
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     gap: 10px; }
+
+.team-btn:hover {
+  background: #1f4968;
+  transform: translateY(-3px);
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+.card:hover::before {
+  opacity: 1;
+}

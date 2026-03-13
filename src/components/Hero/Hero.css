@@ -1,0 +1,224 @@
+/* ══════════════════════════════════════
+   HERO BASE
+══════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  overflow: hidden;
+  color: white;
+}
+
+/* ── SLIDES ── */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 1.5s ease-in-out, transform 6s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* ── CONTENT ── */
+.hero-content {
+  width: 55%;
+  padding-left: 80px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-content span {
+  display: inline-block;
+  border: 2px #25618f solid;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 8px 14px;
+  border-radius: 15px;
+  margin-bottom: 4px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 55px);
+  margin: 20px 0 16px;
+  line-height: 1.15;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 1.8vw, 18px);
+  opacity: 0.9;
+  position: relative;
+  padding-left: 50px;
+  font-style: italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.hero-content p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 3px;
+  background: #25618f;
+}
+
+/* ── FADE UP ANIMATION ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════
+   NAVIGATION — ARROWS + DOTS
+══════════════════════════════════════ */
+.direction {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+}
+
+.prev, .next {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s, border-color 0.3s, transform 0.2s;
+}
+.prev:hover, .next:hover {
+  background: #25618f;
+  border-color: #25618f;
+  transform: scale(1.08);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.45);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, width 0.3s;
+}
+.dot.active {
+  background: #25618f;
+  transform: scale(1.25);
+  width: 24px;            /* active dot stretches into a pill */
+  border-radius: 6px;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+
+/* Large tablet */
+@media (max-width: 1024px) {
+  .hero-content {
+    width: 65%;
+    padding-left: 56px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero-content {
+    width: 80%;
+    padding-left: 40px;
+    padding-right: 24px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.8rem, 6vw, 36px);
+    margin: 14px 0 12px;
+  }
+
+  .hero-content p {
+    padding-left: 36px;
+    font-size: 1rem;
+  }
+
+  .hero-content p::before { width: 1.5rem; }
+
+  .direction { bottom: 28px; gap: 10px; }
+  .prev, .next { width: 36px; height: 36px; font-size: 18px; }
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+  .hero { height: 100svh; }   /* safe viewport height on mobile browsers */
+
+  .hero-slide {
+    align-items: flex-end;    /* push content to bottom on small screens */
+    padding-bottom: 100px;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 0 24px;
+    text-align: left;
+  }
+
+  .hero-content span {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.6rem, 7vw, 28px);
+    margin: 12px 0 10px;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    padding-left: 30px;
+    line-height: 1.55;
+  }
+
+  .hero-content p::before {
+    width: 1.2rem;
+    top: 10px;
+    transform: none;
+  }
+
+  .direction {
+    bottom: 28px;
+    gap: 8px;
+  }
+
+  .prev, .next {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .dot { width: 8px; height: 8px; }
+  .dot.active { width: 18px; }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .hero-content { padding: 0 16px; }
+  .hero-content h1 { font-size: 1.5rem; }
+  .hero-content p  { font-size: 0.85rem; }
+}

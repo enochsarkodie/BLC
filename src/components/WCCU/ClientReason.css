@@ -1,0 +1,200 @@
+/* ══════════════════════════════════════
+   SECTION WRAPPER
+══════════════════════════════════════ */
+.reason {
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* ══════════════════════════════════════
+   LEFT — IMAGE + PLAY BUTTON
+══════════════════════════════════════ */
+.reason-left {
+  flex: 0 0 42%;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.14);
+}
+
+.reason-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.reason-left:hover .reason-img {
+  transform: scale(1.03);
+}
+
+/* play button overlay */
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  color: rgba(255, 255, 255, 0.88);
+  cursor: pointer;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35));
+  transition: color 0.3s, transform 0.3s;
+  z-index: 2;
+}
+
+.play-icon:hover {
+  color: #ffffff;
+  transform: translate(-50%, -50%) scale(1.12);
+}
+
+/* dark overlay so play icon is always visible */
+.reason-left::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 25, 47, 0.2);
+  pointer-events: none;
+  transition: background 0.3s;
+}
+.reason-left:hover::after {
+  background: rgba(10, 25, 47, 0.35);
+}
+
+/* ══════════════════════════════════════
+   RIGHT — TEXT CONTENT
+══════════════════════════════════════ */
+.reason-right {
+  flex: 1;
+}
+
+.reason-right h3 {
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin: 0 0 12px;
+}
+
+.reason-right h2 {
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin: 0 0 18px;
+  color: #25618f;
+  line-height: 1.2;
+  max-width: 420px;
+}
+
+.reason-right h4 {
+  margin-bottom: 16px;
+  font-weight: 300;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: #555;
+  line-height: 1.7;
+}
+
+.reason-right p {
+  color: #888;
+  margin-bottom: 28px;
+  line-height: 1.8;
+  font-size: 0.97rem;
+}
+
+/* ── BUTTON ── */
+.reason-button { margin-top: 8px; }
+
+.reason-btn,
+.reason-btn:link,
+.reason-btn:visited {
+  padding: 12px 24px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  background: #25618f;
+  color: whitesmoke;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.25s, transform 0.2s;
+  border: none;
+  text-decoration: none;
+}
+
+.reason-btn:hover {
+  background: #1f4968;
+  transform: translateY(-3px);
+  color: whitesmoke;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+
+/* Large tablet — tighten gap */
+@media (max-width: 1024px) {
+  .reason {
+    gap: 40px;
+    width: 92%;
+    margin: 64px auto;
+  }
+  .reason-left { flex: 0 0 44%; }
+}
+
+/* Tablet — stack vertically */
+@media (max-width: 768px) {
+  .reason {
+    flex-direction: column;
+    gap: 36px;
+    width: 92%;
+    margin: 52px auto;
+  }
+
+  .reason-left {
+    flex: none;
+    width: 100%;
+  }
+
+  .reason-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .reason-right h2 {
+    max-width: 100%;
+  }
+
+  .play-icon { font-size: 56px; }
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+  .reason {
+    width: 100%;
+    padding: 0 20px;
+    margin: 40px auto;
+    gap: 28px;
+  }
+
+  .reason-left { border-radius: 4px; }
+
+  .play-icon { font-size: 48px; }
+
+  .reason-right h2 { font-size: 1.5rem; }
+  .reason-right h4 { font-size: 1rem; }
+  .reason-right p  { font-size: 0.92rem; }
+
+  .reason-btn { font-size: 0.88rem; padding: 11px 20px; }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .reason { padding: 0 14px; }
+  .reason-right h2 { font-size: 1.35rem; }
+  .play-icon { font-size: 42px; }
+}

@@ -26,37 +26,32 @@ const PracticePage = () => {
       id: 'family-law',
       title:'Family Law',
       image:image_1,
-      subTitle:'At its core, family law deals with the legal rights and obligations that arise from family relationships — whether by blood, marriage, or court order. The main areas include:',
-      description: "We offer comprehensive legal support throughout the industry’s value chain, including exploration, production, licensiMarriage & Civil Partnerships The legal requirements to get married, rights that come with marriage (property, inheritance, next-of-kin status), and the recognition of civil partnerships for same-sex or unmarried couples where applicable. Divorce & Separation This is the biggest area of family law in practice. It covers the legal process of dissolving a marriage, including grounds for divorce, how long the process takes, and legal separation as an alternative. Most modern legal systems have moved toward 'no-fault' divorce, meaning you no longer have to prove wrongdoing — irretrievable breakdown of the marriage is sufficient. ",   
-    },
+      subTitle:"Our Family Law Practice Area offers full-spectrum legal support for family and domestic matters. We counsel and represent clients on key issues like divorce, separation, child custody and access, maintenance claims, matrimonial property division, and adoption. We also manage paternity disputes, guardianship, domestic violence cases, and family estate settlements.",
+       description: "Blending legal acumen with empathy, we understand the emotional weight of family conflicts. We focus on amicable solutions via negotiation, mediation, and settlements, but stand ready to litigate vigorously to defend your rights when needed. Dedicated to children’s best interests, equitable property splits, and smooth navigation of family changes, we deliver clear guidance and robust representation for lasting, practical results."  },
      {
-      id: 'corperate-law',
-      title:'Corperate Law',
+      id: 'corporate-law',
+      title:'Corporate Law',
       image:image_2,
-      subTitle:"Need expert guidance in corporate matters? At Black Law Consult, we're your trusted partner in Ghana. 😊 Our corporate law specialists help businesses thrive, navigating complexities with ease",
-      description:"From startups to established companies, we've got you covered. Whether it's entity formation, contracts, mergers, or disputes, our team provides tailored solutions. We'll help you understand Ghana's regulatory landscape, protect your interests, and drive growth. Let's work together to turn your business goals into reality. Contact us for a consultation and let's drive your business forward, legally and smartly"    
-    },
+      subTitle:"Our Corporate Law Practice Area delivers strategic legal counsel and representation for businesses, entrepreneurs, and investors across all phases of commercial operations. We guide clients through company formation and registration, corporate governance, regulatory compliance, shareholder dynamics, and restructuring. Our experts also cover directors’ duties, beneficial ownership rules, and adherence to relevant corporate regulations.",
+       description:"We handle diverse transactions such as share purchases, joint ventures, mergers and acquisitions, corporate financing, and investment setups. Additionally, we draft and review essential documents like shareholder agreements, partnership contracts, commercial deals, and other paperwork to streamline business functions. We prioritize practical, business-savvy solutions that minimize risks, ensure compliance, boost efficiency, and drive enduring growth—partnering closely with you for lasting success." },
      {
       id: 'criminal-law',
       title:'Criminal Law',
       image:image_3,
-      subTitle:" Need a shield in tough times?  At Black Law Consult, we're your go-to for criminal law expertise in Ghana.  Our team of seasoned lawyers has your back when the heat is on. ",
-      description:" We've handled diverse cases, from misdemeanors to felonies, with in-depth knowledge of Ghana's criminal code and procedures. Don't face it alone. Contact us for a consultation. Your freedom, our priority. We're here to listen, strategize, and fight for your rights."    
-    },
+      subTitle:"Our Criminal Law Practice Area provides dedicated legal representation and advisory services to individuals and corporate entities involved in criminal investigations and prosecutions. We represent clients at every stage of the criminal process, including police investigations, arrest and detention, bail applications, trial proceedings, and appeals.",
+      description:"Our lawyers handle a wide range of criminal matters such as fraud, stealing, dishonest appropriation, assault, cybercrime, white-collar offences, regulatory offences, and other criminal allegations. We also advise clients on their constitutional rights, due process protections, and interactions with law enforcement agencies, ensuring that their rights are safeguarded throughout the criminal justice process. The practice is committed to providing vigorous defence, strategic advocacy, and careful case analysis in order to secure the best possible outcome for our clients. Whether through early intervention, negotiation, or full trial representation, we strive to ensure that justice is fairly administered and that our clients receive strong and professional legal representation." },
      {
       id: 'real-estate',
       title:'Property & Real Estate',
       image:image_4,
-      subTitle:" Need a solid foundation for your property dealings? At Black Law Consult, we're your trusted partner in Ghana's real estate scene.  Our property law experts ensure smooth transactions, protecting your interests every step of the way.",
-      description:"From land acquisition and sales to leases, disputes, and development projects, we've got you covered. We'll guide you through Ghana's property laws, handle paperwork, and negotiate terms. Whether you're buying, selling, or investing, let's secure your assets and make your property dreams a reality. Contact us for a consultation and let's build a solid future, together. "    
-    },
+      subTitle:"Our Property and Real Estate Practice Area provides comprehensive legal services in relation to the acquisition, ownership, development, and transfer of land and real property. We advise individuals, families, developers, and corporate clients on a wide range of real estate matters, including land acquisition, title verification, preparation and review of indentures and leases, land registration, and due diligence investigations.",
+       description:"We represent clients in transactions involving sales, purchases, mortgages, and leasing of property, ensuring that all dealings are properly documented and compliant with the applicable land laws and regulatory requirements. Our practice also provides legal guidance on property development projects, joint venture arrangements, and financing structures involving real estate assets. In addition to transactional work, we represent clients in property and land disputes, including matters relating to title to land, trespass, boundary disputes, recovery of possession, and enforcement of property rights before the courts and other dispute resolution forums. Our objective is to help clients secure clear title, minimize risk, and protect their real estate investments, while providing practical legal solutions that facilitate smooth and legally compliant property transactions"},
      {
       id: 'litigation',
       title:'Litigation',
       image:image_5,
-      subTitle:"Facing a legal battle? At Black Law Consult, we're your fierce advocates in Ghana's courts.  Our litigation experts fight for your rights, with experience in diverse cases and a deep understanding of Ghana's legal system. We've handled complex disputes, negotiated settlements, and won landmark cases",
-      description:"From commercial disputes to personal matters, we'll represent you with strategy and skill. Our team prepares meticulously, argues passionately, and resolves effectively. We'll guide you through the process, protect your interests, and work towards the best possible outcome. Don't go it alone - let's take on the challenge together. Contact us for a consultation and let's secure your victory."
-    },
+      subTitle:"Our Litigation Practice Area provides comprehensive representation to individuals, businesses, and institutions in resolving disputes through the courts and other dispute resolution mechanisms. We represent clients in a broad range of civil and commercial disputes before the District Courts, Circuit Courts, High Courts, the Court of Appeal, and the Supreme Court, as well as before specialized tribunals and regulatory bodies." ,
+       description:"Our litigation team handles matters involving commercial disputes, land and property litigation, contractual disputes, debt recovery, employment disputes, corporate conflicts, and other civil claims. We also provide representation in judicial review proceedings, enforcement of rights, and appeals at various levels of the court system. We adopt a strategic and results-oriented approach to dispute resolution, carefully analyzing each case to determine the most effective course of action. While we are fully prepared to pursue matters through trial where necessary, we also explore alternative dispute resolution methods such as negotiation, mediation, and arbitration to achieve efficient and practical outcomes for our clients. Our goal is to deliver strong advocacy, sound legal strategy, and effective representation to protect our clients’ interests and secure favorable resolutions to complex legal disputes.",  },
      {
       id: 'adr',
       title:'Alternate Dispute Resolution',
@@ -110,9 +105,8 @@ const PracticePage = () => {
       id: 'probono',
       title:'Pro Bono',
       image:image_13,
-      subTitle:"Giving back to the community matters. In here, we're committed to pro bono services in Ghana. 😊 Our lawyers offer free legal support to those in need, championing justice and equality.",
-      description: " Whether it's human rights, women's empowerment, or supporting vulnerable groups, we'll provide skilled advocacy and care. We'll handle cases with sensitivity and expertise, from consultations to court representation. Our pro bono services aim to bridge the justice gap, empower communities, and uphold the rule of law. Let's make a difference together. Contact us to learn how you can benefit or get involved."    
-    },
+      subTitle:"Our Pro Bono Practice reflects our firm’s commitment to promoting access to justice and the protection of fundamental rights within our communities. We provide legal services without charge to individuals and groups who may not have the financial means to obtain legal representation but whose matters raise significant legal or social concerns.",
+       description:"Through our pro bono work, we assist clients with legal advice, representation in court proceedings, and guidance on matters involving human rights, family disputes, landlord and tenant issues, and other areas affecting vulnerable or underserved members of society. We also support community initiatives, non-profit organizations, and public interest causes by providing legal assistance and advocacy where needed. Our lawyers are dedicated to using their professional skills and experience to advance justice, promote fairness, and contribute positively to the development of the legal system and the communities we serve." },
      {
       id:'charity',
       title:"Charity and NGO's",

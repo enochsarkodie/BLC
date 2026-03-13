@@ -90,7 +90,7 @@ function FadePillar({ children, delay }) {
      {/* replace the two lines at the bottom of aboutp-right */}
 <div className="signature-block">
   <h6 className="managing-name">Emmanuel Buabeng Tsibuah</h6>
-  <h5>MANAGING PARTNER</h5>
+  <h5>MASTER OF CHAMBERS</h5>
 </div>
         </div>
       </div>
@@ -147,9 +147,45 @@ function FadePillar({ children, delay }) {
          </div>
       <div className="team-card-content">
         <h2>EMMANUEL BUABENG TSIBUAH</h2>
-        <p className="team-card-title">SENIOR PARTNER</p>
+        <p className="team-card-title">MASTER OF CHAMBERS</p>
   </div>
 </div>
+    </Link>
+
+        <Link to='/about/team-page/moses-benefo-antwi' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap">         {/* ← add this wrapper */}
+         <img src={lawyer9} alt="" />
+        </div>
+      <div className="team-card-content">
+        <h2>KEZIAH AMPONSAH JACKSON</h2>
+        <p className="team-card-title">LAWYER</p>
+     </div>
+     </div>
+    </Link>
+
+        <Link to='/about/team-page/joshua-gyan' className="about-team-grid">
+     <div className="about-team-card">
+        <div className="img-wrap">         {/* ← add this wrapper */}
+         <img src={lawyer5} alt="" />
+        </div>
+      <div className="team-card-content">
+        <h2>JOSHUA GYAN-MENSAH</h2>
+        <p className="team-card-title">FIRM MANAGER</p>
+     </div>
+     </div>
+    </Link>
+
+     <Link to='/about/team-page/moses-benefo-antwi' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap">         {/* ← add this wrapper */}
+         <img src={lawyer6} alt="" />
+        </div>
+      <div className="team-card-content">
+        <h2>MOSES BENEFO ANTWI </h2>
+        <p className="team-card-title">LAWYER</p>
+     </div>
+     </div>
     </Link>
 
      <Link to='/about/' className="about-team-grid">
@@ -158,49 +194,12 @@ function FadePillar({ children, delay }) {
          <img src={lawyer7} alt="" />
         </div>
       <div className="team-card-content">
-        <h2>EMMANUEL BUABENG TSIBUAH</h2>
-        <p className="team-card-title">SENIOR PARTNER</p>
+        <h2>EMMANUEL MAASODOH ZIEKAH</h2>
+        <p className="team-card-title">LAWYER</p>
      </div>
      </div>
     </Link>
     
-
-   <Link to='/about/team-page/moses-benefo-antwi' className="about-team-grid">
-      <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer6} alt="" />
-        </div>
-      <div className="team-card-content">
-        <h2>MOSES ANTWI BENEFO</h2>
-        <p className="team-card-title">SENIOR PARTNER</p>
-     </div>
-     </div>
-    </Link>
-
-     <Link to='/about/team-page/moses-benefo-antwi' className="about-team-grid">
-      <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer9} alt="" />
-        </div>
-      <div className="team-card-content">
-        <h2>MOSES ANTWI BENEFO</h2>
-        <p className="team-card-title">SENIOR PARTNER</p>
-     </div>
-     </div>
-    </Link>
-
-     <Link to='/about/team-page/joshua-gyan' className="about-team-grid">
-     <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer5} alt="" />
-        </div>
-      <div className="team-card-content">
-        <h2>JOSUAH GYAN-MENSAH</h2>
-        <p className="team-card-title">SENIOR PARTNER</p>
-     </div>
-     </div>
-    </Link>
-
       <Link to='/about/team-page/sharon-vanessa-gyan-mensah' className="about-team-grid">
       <div className="about-team-card">
         <div className="img-wrap">         {/* ← add this wrapper */}
@@ -208,7 +207,7 @@ function FadePillar({ children, delay }) {
         </div>
       <div className="team-card-content">
         <h2>SHARON VANESSA GYAN-MENSAH</h2>
-        <p className="team-card-title">SENIOR PARTNER</p>
+        <p className="team-card-title">LAWYER</p>
      </div>
      </div>
     </Link>
@@ -219,8 +218,20 @@ function FadePillar({ children, delay }) {
          <img src={lawyer4} alt="" />
         </div>
       <div className="team-card-content">
-        <h2>EMMANUEL BUABENG TSIBUAH</h2>
-        <p className="team-card-title">SENIOR PARTNER</p>
+        <h2>GRACE MENSAH</h2>
+        <p className="team-card-title">LAWYER</p>
+     </div>
+     </div>
+    </div>
+
+    <div className="about-team-grid">
+     <div className="about-team-card">
+        <div className="img-wrap">         {/* ← add this wrapper */}
+         <img src={lawyer2} alt="" />
+        </div>
+      <div className="team-card-content">
+        <h2>DAVID QUAYSON</h2>
+        <p className="team-card-title">FILING CLERK</p>
      </div>
      </div>
     </div>
@@ -231,23 +242,13 @@ function FadePillar({ children, delay }) {
          <img src={lawyer1} alt="" />
         </div>
       <div className="team-card-content">
-        <h2>REENA JACKSON</h2>
-        <p className="team-card-title">SENIOR PARTNER</p>
+        <h2>REENA BAABA ABOAGYE</h2>
+        <p className="team-card-title">ADMINISTRATOR</p>
      </div>
      </div>
     </div>
 
-<div className="about-team-grid">
-     <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer2} alt="" />
-        </div>
-      <div className="team-card-content">
-        <h2>DAVID JACKSON</h2>
-        <p className="team-card-title">SENIOR PARTNER</p>
-     </div>
-     </div>
-    </div>
+
 
       
      

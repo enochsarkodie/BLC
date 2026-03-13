@@ -1,22 +1,116 @@
 .practice-area{
   padding: 0px 48px;
 }
-.practice-area h1{
-    padding: 30px 65px ;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800; 
+/* ══════════════════════════════════════
+   PRACTICE AREA SECTION HEADER
+══════════════════════════════════════ */
+.practice-area {
+  text-align: center;
+  padding: 72px 24px 48px;
+  position: relative;
+  overflow: hidden;
 }
-.practice-area a{
-    color: #25618f;
+
+/* faint background watermark text */
+.practice-area::before {
+  content: 'LAW';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(8rem, 20vw, 16rem);
+  font-weight: 900;
+  font-family: Georgia, serif;
+  color: rgba(37, 97, 143, 0.04);
+  letter-spacing: 0.2em;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 0;
 }
-.practice-area p{
-    padding: 10px ;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
+
+/* gold top accent bar */
+.practice-area::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 56px; height: 3px;
+  background: #c9a84c;
+  border-radius: 0 0 3px 3px;
+}
+
+.practice-area h1 {
+  position: relative;
+  z-index: 1;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #0a192f;
+  margin: 0 0 4px;
+  line-height: 1.15;
+  padding: 0;
+}
+
+.practice-area a {
+  color: #25618f;
+  font-style: italic;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* ornamental divider */
+.practice-area-rule {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px auto 20px;
+  width: fit-content;
+}
+
+.practice-area-rule::before,
+.practice-area-rule::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a84c);
+}
+.practice-area-rule::after {
+  background: linear-gradient(90deg, #c9a84c, transparent);
+}
+
+.practice-area-diamond {
+  width: 6px;
+  height: 6px;
+  background: #c9a84c;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.practice-area p {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 300;
+  color: #676767;
+  letter-spacing: 0.06em;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.8;
+  padding: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 540px) {
+  .practice-area { padding: 56px 20px 36px; }
+  .practice-area-rule::before,
+  .practice-area-rule::after { width: 36px; }
 }
 .practice {
   display: grid;

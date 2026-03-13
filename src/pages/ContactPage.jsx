@@ -35,10 +35,10 @@ const ContactPage = () => {
     }
   };
   const infoCards = [
-  { icon: "📍", title: "Office Address",  content: <>25 Independence Avenue<br />Accra, Ghana</> },
+  { icon: "📍", title: "Office Address",  content: <>Effiakuma Post Office<br />Takoradi, Ghana</> },
   { icon: "📞", title: "Phone",           content: <a href="tel:+233201234567">+233 20 123 4567</a> },
-  { icon: "✉️", title: "Email",           content: <a href="mailto:info@yourlawfirm.com">info@yourlawfirm.com</a> },
-  { icon: "🕐", title: "Working Hours",   content: <>Mon – Fri &nbsp;·&nbsp; 9AM – 6PM<br /><span style={{fontSize:'0.8rem', opacity:0.6}}>Sat: 10AM – 2PM</span></> },
+  { icon: "✉️", title: "Email",           content: <a href="mailto:info@blacklawfirm.com">info@blacklawconsult.com</a> },
+  { icon: "🕐", title: "Working Hours",   content: <>Mon – Fri &nbsp;·&nbsp; 8AM – 8PM<br /><span style={{fontSize:'0.8rem', opacity:0.6}}>Sat: 10AM – 2PM</span></> },
 ];
   return (
     <div className='contact-page'>
@@ -77,12 +77,12 @@ const ContactPage = () => {
             <div className="contact-map">
               <iframe
                 title="Office Location"
-                src="https://www.google.com/maps?q=Accra,Ghana&output=embed"
+                src="https://www.google.com/maps?q=Takoradi,Ghana&output=embed"
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
               />
-              <div className="contact-map-label">📍 Accra, Ghana</div>
+              <div className="contact-map-label">📍 Takoradi , Ghana</div>
             </div>
  
           </div>

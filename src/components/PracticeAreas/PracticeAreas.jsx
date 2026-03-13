@@ -11,8 +11,11 @@ import image_4 from '../../assets/estate.jpg'
 const PracticeAreas = () => {
   return (
     <div className='practice-area'>
-      <h1>OUR PRACTICE <a>AREAS</a></h1>
-      <p>Professional and Reliable Services</p>
+  <h1>OUR PRACTICE <a>AREAS</a></h1>
+  <div className="practice-area-rule">
+    <span className="practice-area-diamond" />
+  </div>
+  <p>Professional and Reliable Services</p>
       
       <div className="practice">
         <div className="practice-card">
@@ -33,7 +36,7 @@ const PracticeAreas = () => {
           <div className="overlay">
           <p> Legal support for businesses, contracts, compliance, and corporate
             governance.</p>
-          <Link to="/practice-areas/corperate-law"className='practice-button' >
+          <Link to="/practice-areas/corporate-law"className='practice-button' >
           Learn more 
          </Link>
           </div>

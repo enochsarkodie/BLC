@@ -105,22 +105,7 @@
   background: rgba(10, 25, 47, 0.32);
 }
 
-.about-play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 64px;
-  color: rgba(255,255,255,0.88);
-  cursor: pointer;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35));
-  transition: color 0.3s, transform 0.3s;
-  z-index: 2;
-}
-.about-play:hover {
-  color: #fff;
-  transform: translate(-50%, -50%) scale(1.12);
-}
+
 
 /* ══════════════════════════════════════
    RIGHT — TEXT CONTENT
@@ -128,6 +113,7 @@
 .aboutp-right {
   flex: 1;
   text-align: left;
+  
 }
 
 .aboutp-right h3 {
@@ -155,6 +141,7 @@
   color: #555;
   line-height: 1.8;
   text-align: left;
+  text-align: justify;
 }
 
 .aboutp-right p {
@@ -163,6 +150,7 @@
   line-height: 1.85;
   font-size: 0.96rem;
   text-align: left;
+  text-align: justify;
 }
 
 /* ── SIGNATURE BLOCK ── */
@@ -311,14 +299,24 @@
   opacity: 0.9;
 }
 /* ---------OUR TEAM___STYLING*/
-.our-team{
-    padding: 30px 65px ;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800; 
-    color: #676767;
-    font-size: 25px;
+.our-team {
+  font-size: 28px;
+  font-weight: 800;
+  color: #25618f;           /* match your brand blue */
+  letter-spacing: 4px;
+  text-align: center;
+  padding: 30px 65px 8px;
+}
+
+/* accent line under the heading */
+.our-team::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #25618f;
+  margin: 10px auto 0;
+  opacity: 0.5;
 }
 .our-team-p{
     padding: 0px;
@@ -434,6 +432,39 @@
   letter-spacing: 1px;
   margin: 0;
 }
+.team-subheading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 65px 10px;
+  color: #25618f;
+}
+
+.team-subheading::before,
+.team-subheading::after {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: #25618f;
+  opacity: 0.3;
+}
+
+.team-subheading span {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* keeps the 2 admin cards centred rather than stretching full width */
+.about-team--admin {
+  justify-content: center;
+}
+
+.about-team--admin .about-team-grid {
+  flex: 0 1 320px;
+}
 
 /* Responsive breakpoints */
 @media (max-width: 1024px) {
@@ -540,6 +571,8 @@
   font-weight: 300;
   line-height: 1.9;
   margin-bottom: 20px;
+  text-align: justify;
+  
 }
 
 .client-reason-section-1 p:last-child {

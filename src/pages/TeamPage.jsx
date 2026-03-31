@@ -1,4 +1,4 @@
-import  React,  { useState } from 'react'
+import  React,  { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import './TeamPage.css'
 import lawyerBg from '../assets/team-view.jpg'
@@ -7,14 +7,16 @@ import lawyer2 from "../assets/josh.jpg";
 import lawyer3 from "../assets/black.jpg";
 import lawyer4 from "../assets/sharon.jpg";
 import lawyer5 from "../assets/uncle.jpg";
-import lawyer6 from "../assets/FLIK2441.jpg";
-import lawyer7 from "../assets/FLIK2450.jpg";
+import lawyer6 from "../assets/keziah.jpg";
+import lawyer7 from "../assets/ama.jpg";
 import lawyer8 from '../assets/FLIK2418.jpg';
 import lawyer9 from '../assets/lawyer_12.jpg';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
 
 const TeamPage = () => {
+
+ const { lawyerId  } = useParams();
     const lawyers = [
   {
     id: "emmanuel-buabeng-tsibuah",
@@ -44,13 +46,34 @@ const TeamPage = () => {
     image: lawyer5,
     bio: "Moses Benefo Antwi is a private legal practitioner who is specialised in the specialty of corporate and commercial law, sports and entertainment disputes, criminal litigation, family law, ADR matters, human rights issues, constitutional law matters, intellectual property matters, natural resources disputes, inter alia.He holds an MAJM from Sikkim Manipal University, an LLB from Ghana Institute of Management and Public Administration(GIMPA) and a Professional Law Certificate from the Ghana School of Law. He is a member in good standing of the Ghana Bar Association.Typified features of Moses are his expert opinions and advice on legal matters, wisdom and discernment, possessing physical and intellectual stamina, presence in court, humility, honesty, hardworking, humanity and human relations. Above all, he is a people’s person in the legal ecosystem.",
   },
+  {
+    id: "keziah-amponsah-jackson",
+    name: "Keziah Amponsah Jackson",
+    title: "LAWYER",
+    image: lawyer6,
+    bio: "Keziah Amponsah Jackson is an Associate at Black Law Firm, advising individuals, families, and businesses across a broad portfolio of practice areas including family and matrimonial law, land transactions, commercial practice, labour law, and maritime law. In matrimonial and family matters, Keziah provides end-to-end counsel — from petitions and affidavits through to contested hearings and cross-examination strategy — with a practice philosophy rooted in sensitivity, thoroughness, and client dignity. Her transactional work encompasses land documentation, deeds of gift, trust instruments, and estate planning, with particular attention to the intersection of statutory and customary law frameworks in Ghana. A Member of the Chartered Institute of Arbitrators (MCIArb), Keziah approaches dispute resolution with a preference for early, constructive intervention. She advises clients on arbitration clauses, ADR processes, and negotiated settlement — drawing on a background in psychology to navigate high-stakes interpersonal and commercial conflicts with clarity and composure. Keziah holds a Bachelor of Arts in French and Psychology and a Master of Arts in Alternative Dispute Resolution from the University of Ghana and is currently completing a Master of Laws specialising in Law of the Sea and Ocean Governance. This advanced study informs her growing maritime law practice, which engages with shipping, coastal regulation, and Ghana’s evolving blue economy framework. Her French-language fluency extends the firm’s capacity to serve Francophone West African clients and counterparties." },
+  {
+    id: "ama-koomson",
+    name: "Ama Koomson",
+    title: "LAWYER",
+    image: lawyer7,
+    bio: "Ama Koomson is an astute Legal Practitioner with five (5)years’ experience in both corporate and private legal practiceand a member of the Ghana Bar Association in good standing. She is also a trained Mediator and Arbitrator who holds a Professional Executive Master of Alternative Dispute Resolution (ADR) from Gamey and Gamey ADR Institute. Ama holds a qualifying certificate in law from the Ghana School of Law and graduated from Central University in Ghana with a First Class Honours in Bachelor of Laws (LLB). She served at the Legal Department of the Ghana Railway Company Limited in Takoradi and also took up the role as an Associate Lawyer with a private law firm in Takoradi where she engaged in both criminal and civil litigation and dispute resolution across all law practice areas. She also works with an Oil Marketing Company as its Internal Legal Counsel. With her experience in Corporate Law Practice, she manages the company’s legal and compliance matters and ensures that its operations align well with relevant regulatory and licensing requirements, especially ISO standards and certifications. Ama offers strong attention to detail and accuracy and discharges her duties efficiently, diligently and always maintains professional competence."
+   },
 ];
 
 
- const { lawyerId } = useParams();
-const [activeLawyer, setActiveLawyer] = useState(
-  lawyers.find(l => l.id === lawyerId)?.id ?? lawyers[0].id
-);
+// ✅ Fixed — finds the matching lawyer first, falls back to first if not found
+
+const matchedLawyer = lawyers.find(l => l.id === lawyerId);
+const [activeLawyer, setActiveLawyer] = useState(matchedLawyer ? lawyerId : lawyers[0].id);
+
+useEffect(() => {
+  window.scrollTo({ top: 50, behavior: 'instant' }); // on page load
+}, []);
+
+useEffect(() => {
+  window.scrollTo({ top: 50, behavior: 'smooth' }); // on tab switch
+}, [activeLawyer]);
 const active = lawyers.find(l => l.id === activeLawyer);
 
   return (

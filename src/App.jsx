@@ -24,7 +24,7 @@ function App() {
         <Route path="/practice-areas" element={<PracticePage />} />
         <Route path="/practice-areas/:id" element={<PracticePage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/about/team-page/:id" element={<TeamPage />} />
+        <Route path="/about/team-page/:lawyerId" element={<TeamPage />} />
       </Routes>
       
       <Footer />

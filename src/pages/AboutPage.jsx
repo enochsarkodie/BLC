@@ -9,7 +9,8 @@ import lawyer5 from "../assets/josh.jpg";
 import lawyer6 from "../assets/uncle.jpg";
 import lawyer7 from "../assets/emma.jpg";
 import lawyer8 from '../assets/sharon.jpg';
-import lawyer9 from '../assets/lawyer_12.jpg';
+import lawyer9 from '../assets/keziah.jpg';
+import lawyer10 from '../assets/ama.jpg';
 import { Link } from "react-router-dom";
 
 import { FaCirclePlay } from "react-icons/fa6";
@@ -68,7 +69,7 @@ function FadePillar({ children, delay }) {
       <div className="about-des">
       <div className="aboutp-left">
         <img src={lawyer3} alt="" />
-        <FaCirclePlay className="about-play"/> 
+        {/* <FaCirclePlay className="about-play"/>  */}
       </div>
         <div className="aboutp-right">
           <h3>ABOUT BLACK LAW CONSULT</h3>
@@ -135,124 +136,120 @@ function FadePillar({ children, delay }) {
 
 <section>
   <h1 className="our-team">OUR TEAM</h1>
-  <p className="our-team-p"> Dedicated professionals committed to achieving the best outcomes 
-            for our clients.</p>
+  <p className="our-team-p">Dedicated professionals committed to achieving the best outcomes for our clients.</p>
+
+  {/* ── Legal Team ── */}
+  <div className="team-subheading">
+    <span>Legal Team</span>
+  </div>
 
   <div className="about-team">
-
     <Link to='/about/team-page/emmanuel-buabeng-tsibuah' className="about-team-grid">
       <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer3} alt="" />
-         </div>
-      <div className="team-card-content">
-        <h2>EMMANUEL BUABENG TSIBUAH</h2>
-        <p className="team-card-title">MASTER OF CHAMBERS</p>
+        <div className="img-wrap"><img src={lawyer3} alt="" /></div>
+        <div className="team-card-content">
+          <h2>EMMANUEL BUABENG TSIBUAH</h2>
+          <p className="team-card-title">MASTER OF CHAMBERS</p>
+        </div>
+      </div>
+    </Link>
+
+    <Link to='/about/team-page/keziah-amponsah-jackson' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer9} alt="" /></div>
+        <div className="team-card-content">
+          <h2>KEZIAH AMPONSAH JACKSON</h2>
+          <p className="team-card-title">LAWYER</p>
+        </div>
+      </div>
+    </Link>
+
+    <Link to='/about/team-page/joshua-gyan' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer5} alt="" /></div>
+        <div className="team-card-content">
+          <h2>JOSHUA GYAN-MENSAH</h2>
+          <p className="team-card-title">FIRM MANAGER</p>
+        </div>
+      </div>
+    </Link>
+
+     <Link to='/about/team-page/ama-koomson' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer10} alt="" /></div>
+        <div className="team-card-content">
+          <h2>AMA KOOMSON</h2>
+          <p className="team-card-title">LAWYER</p>
+        </div>
+      </div>
+    </Link>
+
+    <Link to='/about/team-page/moses-benefo-antwi' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer6} alt="" /></div>
+        <div className="team-card-content">
+          <h2>MOSES BENEFO ANTWI</h2>
+          <p className="team-card-title">LAWYER</p>
+        </div>
+      </div>
+    </Link>
+
+    <Link to='/about/team-page/moses-benefo-antwi' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer7} alt="" /></div>
+        <div className="team-card-content">
+          <h2>EMMANUEL MAASODOH ZIEKAH</h2>
+          <p className="team-card-title">LAWYER</p>
+        </div>
+      </div>
+    </Link>
+
+    <Link to='/about/team-page/sharon-vanessa-gyan-mensah' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer8} alt="" /></div>
+        <div className="team-card-content">
+          <h2>SHARON VANESSA GYAN-MENSAH</h2>
+          <p className="team-card-title">LAWYER</p>
+        </div>
+      </div>
+    </Link>
+
+     <Link to='/about/team-page/sharon-vanessa-gyan-mensah' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer4} alt="" /></div>
+        <div className="team-card-content">
+          <h2>GRACE MENSAH</h2>
+          <p className="team-card-title">LAWYER</p>
+        </div>
+      </div>
+    </Link>
   </div>
-</div>
-    </Link>
 
-        <Link to='/about/team-page/moses-benefo-antwi' className="about-team-grid">
-      <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer9} alt="" />
-        </div>
-      <div className="team-card-content">
-        <h2>KEZIAH AMPONSAH JACKSON</h2>
-        <p className="team-card-title">LAWYER</p>
-     </div>
-     </div>
-    </Link>
+  {/* ── Administration ── */}
+  <div className="team-subheading">
+    <span>Administration</span>
+  </div>
 
-        <Link to='/about/team-page/joshua-gyan' className="about-team-grid">
-     <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer5} alt="" />
-        </div>
-      <div className="team-card-content">
-        <h2>JOSHUA GYAN-MENSAH</h2>
-        <p className="team-card-title">FIRM MANAGER</p>
-     </div>
-     </div>
-    </Link>
-
-     <Link to='/about/team-page/moses-benefo-antwi' className="about-team-grid">
+  <div className="about-team about-team--admin">
+    <div className="about-team-grid">
       <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer6} alt="" />
+        <div className="img-wrap"><img src={lawyer2} alt="" /></div>
+        <div className="team-card-content">
+          <h2>DAVID QUAYSON</h2>
+          <p className="team-card-title">FILING CLERK</p>
         </div>
-      <div className="team-card-content">
-        <h2>MOSES BENEFO ANTWI </h2>
-        <p className="team-card-title">LAWYER</p>
-     </div>
-     </div>
-    </Link>
-
-     <Link to='/about/' className="about-team-grid">
-      <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer7} alt="" />
-        </div>
-      <div className="team-card-content">
-        <h2>EMMANUEL MAASODOH ZIEKAH</h2>
-        <p className="team-card-title">LAWYER</p>
-     </div>
-     </div>
-    </Link>
-    
-      <Link to='/about/team-page/sharon-vanessa-gyan-mensah' className="about-team-grid">
-      <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer8} alt="" />
-        </div>
-      <div className="team-card-content">
-        <h2>SHARON VANESSA GYAN-MENSAH</h2>
-        <p className="team-card-title">LAWYER</p>
-     </div>
-     </div>
-    </Link>
-
-     <div className="about-team-grid">
-      <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer4} alt="" />
-        </div>
-      <div className="team-card-content">
-        <h2>GRACE MENSAH</h2>
-        <p className="team-card-title">LAWYER</p>
-     </div>
-     </div>
+      </div>
     </div>
 
     <div className="about-team-grid">
-     <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer2} alt="" />
-        </div>
-      <div className="team-card-content">
-        <h2>DAVID QUAYSON</h2>
-        <p className="team-card-title">FILING CLERK</p>
-     </div>
-     </div>
-    </div>
-
-     <div className="about-team-grid">
       <div className="about-team-card">
-        <div className="img-wrap">         {/* ← add this wrapper */}
-         <img src={lawyer1} alt="" />
+        <div className="img-wrap"><img src={lawyer1} alt="" /></div>
+        <div className="team-card-content">
+          <h2>REENA BAABA ABOAGYE</h2>
+          <p className="team-card-title">ADMINISTRATOR</p>
         </div>
-      <div className="team-card-content">
-        <h2>REENA BAABA ABOAGYE</h2>
-        <p className="team-card-title">ADMINISTRATOR</p>
-     </div>
-     </div>
+      </div>
     </div>
-
-
-
-      
-     
-
   </div>
 </section>
 

@@ -11,7 +11,7 @@ const Contact = () => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "1d6fd7f1-ca39-4bc5-9ecc-8002d157582d");
+    formData.append("access_key", "e44a4c95-5c49-471a-addb-1fc35ebcb3b6");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -41,9 +41,9 @@ const Contact = () => {
             clients
           </p>
           <ul>
-            <li><FaMailBulk className='icon'/>contact@blacklawconsult.com</li>
-            <li><FaPhone className='icon'/>+233 2453 3453 2</li>
-            <li><FaLocationArrow className='icon'/>Behind Effia Washing Bay,<br/> Takoradi, Ghana</li>
+            <li><FaMailBulk className='icon'/>info@blacklawconsult.com</li>
+            <li><FaPhone className='icon'/>+233 55 307 6529</li>
+            <li><FaLocationArrow className='icon'/>1st Floor, Vans International Building. Efia, Washing Bay.<br/> Takoradi, Ghana</li>
           </ul>
         </div>
       <div className="contact-col">

@@ -25,8 +25,7 @@ const TopHeader = () => {
       </div>
       
       <div className="top-header-right">
-        <a href="#"><FaFacebookF /></a>
-        <a href="#"><FaLinkedinIn /></a>
+       
         <a href="#"><FaWhatsapp/></a>
       </div>
     </div>

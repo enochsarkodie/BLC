@@ -7,7 +7,7 @@ import { FaBalanceScale } from "react-icons/fa";
 const Value = () => {
   return (
     <div className='value'>
-        <h1>OUR <a>VALUE</a></h1> 
+        <h1>OUR <a>VALUES</a></h1> 
         <h2>Professional and Reliable Services</h2>
         
         <div className="value-grid">

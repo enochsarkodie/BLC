@@ -154,17 +154,7 @@ function FadePillar({ children, delay }) {
       </div>
     </Link>
 
-    <Link to='/about/team-page/keziah-amponsah-jackson' className="about-team-grid">
-      <div className="about-team-card">
-        <div className="img-wrap"><img src={lawyer9} alt="" /></div>
-        <div className="team-card-content">
-          <h2>KEZIAH AMPONSAH JACKSON</h2>
-          <p className="team-card-title">LAWYER</p>
-        </div>
-      </div>
-    </Link>
-
-    <Link to='/about/team-page/joshua-gyan' className="about-team-grid">
+        <Link to='/about/team-page/joshua-gyan' className="about-team-grid">
       <div className="about-team-card">
         <div className="img-wrap"><img src={lawyer5} alt="" /></div>
         <div className="team-card-content">
@@ -184,6 +174,26 @@ function FadePillar({ children, delay }) {
       </div>
     </Link>
 
+    <Link to='/about/team-page/keziah-amponsah-jackson' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer9} alt="" /></div>
+        <div className="team-card-content">
+          <h2>KEZIAH AMPONSAH JACKSON</h2>
+          <p className="team-card-title">LAWYER</p>
+        </div>
+      </div>
+    </Link>
+
+  <Link to='/about/team-page/emmanuel-maasodoh-ziekah' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer7} alt="" /></div>
+        <div className="team-card-content">
+          <h2>EMMANUEL MAASODOH ZIEKAH</h2>
+          <p className="team-card-title">LAWYER</p>
+        </div>
+      </div>
+    </Link>
+
     <Link to='/about/team-page/moses-benefo-antwi' className="about-team-grid">
       <div className="about-team-card">
         <div className="img-wrap"><img src={lawyer6} alt="" /></div>
@@ -194,15 +204,7 @@ function FadePillar({ children, delay }) {
       </div>
     </Link>
 
-    <Link to='/about/team-page/moses-benefo-antwi' className="about-team-grid">
-      <div className="about-team-card">
-        <div className="img-wrap"><img src={lawyer7} alt="" /></div>
-        <div className="team-card-content">
-          <h2>EMMANUEL MAASODOH ZIEKAH</h2>
-          <p className="team-card-title">LAWYER</p>
-        </div>
-      </div>
-    </Link>
+  
 
     <Link to='/about/team-page/sharon-vanessa-gyan-mensah' className="about-team-grid">
       <div className="about-team-card">
@@ -227,7 +229,7 @@ function FadePillar({ children, delay }) {
 
   {/* ── Administration ── */}
   <div className="team-subheading">
-    <span>Administration</span>
+    <span>Non-Legal Staff</span>
   </div>
 
   <div className="about-team about-team--admin">

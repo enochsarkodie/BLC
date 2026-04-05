@@ -16,7 +16,7 @@ const ContactPage = () => {
     setResult("");
 
     const formData = new FormData(event.target);
-    formData.append("access_key", "1d6fd7f1-ca39-4bc5-9ecc-8002d157582d");
+    formData.append("access_key", "e44a4c95-5c49-471a-addb-1fc35ebcb3b6");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -35,8 +35,8 @@ const ContactPage = () => {
     }
   };
   const infoCards = [
-  { icon: "📍", title: "Office Address",  content: <>Effiakuma Post Office<br />Takoradi, Ghana</> },
-  { icon: "📞", title: "Phone",           content: <a href="tel:+233201234567">+233 20 123 4567</a> },
+  { icon: "📍", title: "Office Address",  content: <>1st Floor, Vans International Building. Efia, Washing Bay.<br />Takoradi, Ghana</> },
+  { icon: "📞", title: "Phone",           content: <a href="tel:+233201234567">+233 55 307 6529</a> },
   { icon: "✉️", title: "Email",           content: <a href="mailto:info@blacklawfirm.com">info@blacklawconsult.com</a> },
   { icon: "🕐", title: "Working Hours",   content: <>Mon – Fri &nbsp;·&nbsp; 8AM – 8PM<br /><span style={{fontSize:'0.8rem', opacity:0.6}}>Sat: 10AM – 2PM</span></> },
 ];

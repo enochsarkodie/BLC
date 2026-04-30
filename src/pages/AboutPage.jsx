@@ -1,4 +1,5 @@
 import { useRef,useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import "./AboutPage.css";
 import aboutBg from "../assets/aboutUs.jpg"; // use a professional law image
 import lawyer1 from "../assets/reena.jpg";
@@ -11,6 +12,8 @@ import lawyer7 from "../assets/emma.jpg";
 import lawyer8 from '../assets/sharon.jpg';
 import lawyer9 from '../assets/keziah.jpg';
 import lawyer10 from '../assets/ama.jpg';
+import lawyer11 from '../assets/gates.jpg';
+
 import { Link } from "react-router-dom";
 
 import { FaCirclePlay } from "react-icons/fa6";
@@ -21,17 +24,17 @@ import { FaBalanceScale } from "react-icons/fa";
 const AboutPage = () => {
    
 const pillars = [
-  { icon: "⚖️", title: "Unwavering Integrity",  text: "We uphold the highest ethical standards in every matter — trust, confidentiality, and strict avoidance of conflict of interest are not aspirations; they are our professional baseline." },
-  { icon: "💡", title: "Innovative Thinking",    text: "We are a forward-thinking, evolving practice. Our people and systems are built to deliver creative, strategically sound solutions — even in the most complex situations." },
-  { icon: "📞", title: "Always Within Reach",    text: "Call, SMS, WhatsApp, or email — we embrace every modern channel of communication. Our open-door policy means a member of our team is always available when you need us most." },
+  { icon: "⚖️", title: "Unwavering Integrity",  text: "We uphold the highest ethical standards in every matter: trust, confidentiality, and strict avoidance of conflict of interest are not aspirations; they are our professional baseline." },
+  { icon: "💡", title: "Innovative Thinking",    text: "We are a forward-thinking, evolving practice. Our people and systems are built to deliver creative and strategically sound solutions even in the most complex situations." },
+  { icon: "📞", title: "Always Within Reach",    text: "We embrace various forms of communication; Call, SMS, WhatsApp, or email" },
   { icon: "🤝", title: "Client-First Approach",  text: "Every decision we make is driven by your interests. We combine legal excellence with genuine care to ensure you feel fully supported from first consultation to final resolution." },
-  { icon: "🏛️", title: "Depth of Experience",   text: "Our team brings decades of combined expertise across corporate, criminal, family, and commercial law — delivering dependable outcomes across every practice area." },
-  { icon: "🔒", title: "Strict Confidentiality", text: "Every matter entrusted to us is handled with the utmost discretion. Your privacy is not a formality — it is a professional obligation we honour without exception." },
+  { icon: "🏛️", title: "Depth of Experience",   text: "Our team brings decades of combined expertise across corporate, criminal, family, and commercial law, delivering dependable outcomes across every practice area." },
+  { icon: "🔒", title: "Strict Confidentiality", text: "Every matter entrusted to us is handled with the utmost discretion. Your privacy is a professional obligation we honour without exception." },
 ];
  
 const stats = [
-  { num: "1000+",  label: "Clients Consultation"    },
-  { num: "87%",  label: "Success Rate"  },
+  { num: "1000+",  label: "Client Consultations"    },
+  { num: "94%",  label: "Success Rate"  },
   { num: "300+", label: "Cases Resolved"        },
   { num: "15+",  label: "Affiliations"  },
 ];
@@ -55,6 +58,10 @@ function FadePillar({ children, delay }) {
   return (
     <div className="about-page">
 
+    <Helmet>
+      <link rel="canonical" href="https://blacklawconsult.com/about" />
+      <title> Black Law Consult About Us |</title>
+    </Helmet>
      
       <section
         className="about-hero"
@@ -73,7 +80,7 @@ function FadePillar({ children, delay }) {
       </div>
         <div className="aboutp-right">
           <h3>ABOUT BLACK LAW CONSULT</h3>
-          <h2>Our Value Preposition</h2>
+          <h2>Our Value Proposition</h2>
           <h4>
       While rooted in Ghana, our practice is not limited by borders. We advise businessess across Africa and internationally, 
       offering support on cross-border matters and global transactions. Our expertise spans corporate and commercial law, dispute resolution, family law, 
@@ -84,9 +91,7 @@ function FadePillar({ children, delay }) {
       We involve the client in the design of our legal solutions and profess the best 
       advice in all circumstances to aid our clients’ choices. Our ability to exceed clients’ expectations is anchored in our collective entrepreneurial and managerial experience
        coupled with sound legal understanding.
-       We involve the client in the design of our legal solutions and profess the best 
-      advice in all circumstances to aid our clients’ choices. Our ability to exceed clients’ expectations is anchored in our collective entrepreneurial and managerial experience
-       coupled with sound legal understanding.
+      
      </p>
      {/* replace the two lines at the bottom of aboutp-right */}
 <div className="signature-block">
@@ -216,7 +221,7 @@ function FadePillar({ children, delay }) {
       </div>
     </Link>
 
-     <Link to='/about/team-page/sharon-vanessa-gyan-mensah' className="about-team-grid">
+     <Link to='/about/team-page/grace-mensah' className="about-team-grid">
       <div className="about-team-card">
         <div className="img-wrap"><img src={lawyer4} alt="" /></div>
         <div className="team-card-content">
@@ -234,6 +239,16 @@ function FadePillar({ children, delay }) {
 
   <div className="about-team about-team--admin">
     <div className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer11} alt="" /></div>
+        <div className="team-card-content">
+          <h2>GABRIEL ROCKSON</h2>
+          <p className="team-card-title">MANAGING CLERK</p>
+        </div>
+      </div>
+    </div>
+
+     <div className="about-team-grid">
       <div className="about-team-card">
         <div className="img-wrap"><img src={lawyer2} alt="" /></div>
         <div className="team-card-content">
@@ -256,7 +271,7 @@ function FadePillar({ children, delay }) {
 </section>
 
 <section>
-  <div className="client-reason-section">
+  {/* <div className="client-reason-section">
     <h1>WHAT WE ARE EXPERTS AT</h1>
      <h2>WHY CLIENTS CHOOSE US? </h2>
   </div>
@@ -265,7 +280,7 @@ function FadePillar({ children, delay }) {
  <p>We are a reliable, innovative, and evolving business, and with our people, systems, and strategic approach to handling every problem, you can rely on us for all your business support </p>
 
 <p>Also, we are easy to reach – not only do we adopt an open-door policy encouraging our clients to reach out to us at all times,  we also combine the new ways of communication 
-in order to be available at all times. We are a call, a text/SMS, WhatsApp, Email, etc. away from each client issue.</p>
+in order to be available at all times. We are a call, a text/SMS, WhatsApp or an Email away from each client issue.</p>
 </div>
 <div className="client-reason-section-right">
   <p>We reckon our continuous existence is because of our devotion to complying with the highest
@@ -273,14 +288,14 @@ in order to be available at all times. We are a call, a text/SMS, WhatsApp, Emai
       and avoid conflict of interest in all our work. Our commitment to
      our ethical codes is the hallmark of our practice.</p>
 </div>
-</div>
+</div> */}
   <hr className="cr-divider" />
  
         {/* ── PILLARS ── */}
         <div className="cr-pillars-wrap">
           <div className="cr-pillars-heading">
             <h3>The Six Pillars of Our Practice</h3>
-            <p>Every commitment we make to our clients is backed by these core principles — principles that have guided our practice from day one.</p>
+            <p>The core principles that back every commitment we make to our clients</p>
           </div>
           <div className="cr-pillars-grid">
             {pillars.map((p, i) => (

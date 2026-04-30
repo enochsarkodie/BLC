@@ -1,6 +1,7 @@
 import React from 'react'
 import './Contact.css'
 import { FaMailBulk, FaPhone, FaLocationArrow, FaStickyNote  } from 'react-icons/fa'
+import { MdMarkunreadMailbox } from 'react-icons/md'
 
 const Contact = () => {
 
@@ -11,7 +12,7 @@ const Contact = () => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "e44a4c95-5c49-471a-addb-1fc35ebcb3b6");
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -36,14 +37,15 @@ const Contact = () => {
       
         <div className="contact-col">
           <h3>Send us a message <FaStickyNote className='img'/></h3>
-          <p>Feel free to reach use through our form or find our contact information below
+          <p>Feel free to reach us through our form or find our contact information below
             Your feedback, questions and suggestions are important to us as we strive to provide exceptional service to our
             clients
           </p>
           <ul>
             <li><FaMailBulk className='icon'/>info@blacklawconsult.com</li>
             <li><FaPhone className='icon'/>+233 55 307 6529</li>
-            <li><FaLocationArrow className='icon'/>1st Floor, Vans International Building. Efia, Washing Bay.<br/> Takoradi, Ghana</li>
+            <li><FaLocationArrow className='icon'/>1st Floor, Vans International Building. Near Efia Washing Bay.<br/>Effia, Takoradi</li>
+            <li><MdMarkunreadMailbox className='icon'/>P.O.BOX TD 509. Takoradi, Ghana</li>
           </ul>
         </div>
       <div className="contact-col">

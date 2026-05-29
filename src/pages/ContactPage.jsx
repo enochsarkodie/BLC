@@ -1,7 +1,10 @@
 import React,{useState} from 'react'
 import './ContactPage.css'
 import contactBg from '../assets/contact.avif/'
-import { Helmet } from 'react-helmet-async'
+import { FaCirclePlay } from "react-icons/fa6";
+import { FcIdea } from "react-icons/fc";
+import { GiOnTarget } from "react-icons/gi";
+import { FaBalanceScale } from "react-icons/fa";
 
 const ContactPage = () => {
     const [result, setResult] = useState("");
@@ -13,8 +16,7 @@ const ContactPage = () => {
     setResult("");
 
     const formData = new FormData(event.target);
-    
-    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
+    formData.append("access_key", "e44a4c95-5c49-471a-addb-1fc35ebcb3b6");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -33,17 +35,13 @@ const ContactPage = () => {
     }
   };
   const infoCards = [
-  { icon: "📍", title: "Office Address",  content: <>1st Floor, Vans International Building. Near Efia Washing Bay.<br />Effia, Takoradi. <br />P.O.BOX TD 509 <br />Takoradi, Ghana</> },
+  { icon: "📍", title: "Office Address",  content: <>1st Floor, Vans International Building. Efia, Washing Bay.<br />Takoradi, Ghana</> },
   { icon: "📞", title: "Phone",           content: <a href="tel:+233201234567">+233 55 307 6529</a> },
-  { icon: "✉️", title: "Email",           content: <a href="mailto:blacklawfirm@gmail.com">info@blacklawconsult.com</a> },
+  { icon: "✉️", title: "Email",           content: <a href="mailto:info@blacklawfirm.com">info@blacklawconsult.com</a> },
   { icon: "🕐", title: "Working Hours",   content: <>Mon – Fri &nbsp;·&nbsp; 8AM – 8PM<br /><span style={{fontSize:'0.8rem', opacity:0.6}}>Sat: 10AM – 2PM</span></> },
 ];
   return (
     <div className='contact-page'>
-        <Helmet>
-        <link rel="canonical" href="https://blacklawconsult.com/contact" />
-          <title> Black Law Consult | Contact Us</title>
-       </Helmet>
        <section
                 className="contact-hero"
                       style={{ backgroundImage: `url(${contactBg})` }}

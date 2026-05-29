@@ -13,6 +13,8 @@ import lawyer8 from '../assets/sharon.jpg';
 import lawyer9 from '../assets/keziah.jpg';
 import lawyer10 from '../assets/ama.jpg';
 import lawyer11 from '../assets/gates.jpg';
+import lawyer12 from '../assets/joy.png';
+
 
 import { Link } from "react-router-dom";
 
@@ -216,6 +218,16 @@ function FadePillar({ children, delay }) {
         <div className="img-wrap"><img src={lawyer8} alt="" /></div>
         <div className="team-card-content">
           <h2>SHARON VANESSA GYAN-MENSAH</h2>
+          <p className="team-card-title">LAWYER</p>
+        </div>
+      </div>
+    </Link>
+
+     <Link to='/about/team-page/dzidzor-joy-asamoah-jackson' className="about-team-grid">
+      <div className="about-team-card">
+        <div className="img-wrap"><img src={lawyer12} alt="" /></div>
+        <div className="team-card-content">
+          <h2>DZIDZOR JOY ASAMOAH JACKSON</h2>
           <p className="team-card-title">LAWYER</p>
         </div>
       </div>

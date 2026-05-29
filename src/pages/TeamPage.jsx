@@ -11,6 +11,7 @@ import lawyer6 from "../assets/keziah.jpg";
 import lawyer7 from "../assets/ama.jpg";
 import lawyer8 from '../assets/emma.jpg';
 import lawyer9 from '../assets/abigail.jpg';
+import lawyer10 from '../assets/joy.png';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
 
@@ -65,7 +66,13 @@ const TeamPage = () => {
     image: lawyer4,
     bio: "Sharon Vanessa Gyan-Mensah is a Legal Practitioner and a member in good standing of the Ghana Bar Association. She holds an LLB from the Kwame Nkrumah University of Science and Technology (KNUST), a Qualifying Certificate in Law from the Ghana School of Law, and is currently pursuing a Master of Laws (LLM) at KNUST. Sharon's areas of interest span family law, oil and gas law, environmental law, and criminal law: a range that reflects both the breadth of her curiosity and a clear eye on where she intends to build. She approaches every matter with diligence and sound legal reasoning, and is steadily carving out her place in the profession with integrity and purpose. Sharon has participated in several professional conferences and seminars aimed at deepening her understanding of emerging legal trends. Her commitment to continuous learning and her passion for excellence mark her as a practitioner to watch." 
    },
-
+   {
+    id: "dzidzor-joy-asamoah-jackson",
+    name: "Dzidzor Joy Asamoah Jackson",
+    title: "LAWYER",
+    image: lawyer10,
+    bio: "Dzidzor Joy Asamoah Jackson is a Ghanaian lawyer with experience in corporate and commercial law, regulatory compliance, labour law, and corporate governance. She previously worked as in-house counsel at AngloGold Ashanti, where she advised on legal, compliance, and operational matters within a multinational corporate environment. She holds a Bachelor of Laws (LL.B) degree from University of Cape Coast and obtained her professional legal qualification from The Gambia Law School, where she was called to the Gambian Bar. She subsequently attended Ghana School of Law to pursue the professional law course for legal practice in Ghana. Dzidzor has a strong interest in corporate law, governance, and business-focused legal advisory work. She is known for her analytical approach, attention to detail, and ability to provide practical legal solutions tailored to clients’ needs. She is committed to continuous learning and professional development and is driven by a desire to build a legal practice that delivers excellent service while contributing meaningfully to the growth of businesses and institutions in Ghana and across Africa."
+  },
    {
     id: "grace-mensah",
     name: "Grace Mensah",
@@ -73,8 +80,7 @@ const TeamPage = () => {
     image: lawyer9,
     bio: "Grace Mensah is a dedicated legal practitioner, called to the Bar after obtaining her Barrister-at-Law certificate from the Gambia Law School. She holds a Bachelor of Laws (LL.B) degree from Kwame Nkrumah University of Science and Technology and is currently pursuing her Master’s degree at the same institution, further strengthening her academic and professional foundation. She is known for her respectful, bold, and confident demeanor. She is deeply committed to the principles of justice, unity, and the promotion of a peaceful society. Her passion for alternative dispute resolution (ADR) has been shaped through practical, hands-on experience during her national service with the Legal Aid Commission, where she served as a co-mediator. In this role, she handled cases involving individuals who could not afford legal representation, as well as parties who preferred amicable, non-litigious methods of resolving disputes. Her professional development has also been enriched through mentorship under a judge, giving her valuable insight into judicial reasoning and courtroom dynamics. This experience enhances her ability to approach legal issues with both strategic depth and practical awareness. Currently practicing as a general practitioner, She has a growing interest in International Trade and Maritime Law, with a clear ambition to specialize in Maritime Law in the future. She remains committed to continuous learning and excellence in legal practice, with the goal of making meaningful contributions both locally and internationally." 
    },
- 
-
+  
 ];
 
 

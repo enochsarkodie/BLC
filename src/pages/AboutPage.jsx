@@ -13,7 +13,7 @@ import lawyer8 from '../assets/sharon.jpg';
 import lawyer9 from '../assets/keziah.jpg';
 import lawyer10 from '../assets/ama.jpg';
 import lawyer11 from '../assets/gates.jpg';
-import lawyer12 from '../assets/joy.png';
+import lawyer12 from '../assets/Joyy.jpg';
 
 
 import { Link } from "react-router-dom";

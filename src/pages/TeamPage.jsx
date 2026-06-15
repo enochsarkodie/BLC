@@ -11,7 +11,7 @@ import lawyer6 from "../assets/keziah.jpg";
 import lawyer7 from "../assets/ama.jpg";
 import lawyer8 from '../assets/emma.jpg';
 import lawyer9 from '../assets/abigail.jpg';
-import lawyer10 from '../assets/joy.png';
+import lawyer10 from '../assets/Joyy.jpg';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
 

@@ -9,12 +9,12 @@ const TopHeader = () => {
       <div className="top-header-left">
         <div className="top-item">
           <MdEmail className='top-header-icons' />
-          <span>info@lawfirm.com</span>
+          <span>info@blacklawconsult.com</span>
         </div>
         
        <div className="top-item">
           <MdPhone  className='top-header-icons'/>
-          <span className='header-phone'>+233 (0) 234 3242342</span>
+          <span className='header-phone'>+233 55 307 6529</span>
         </div>
       
 
@@ -26,7 +26,10 @@ const TopHeader = () => {
       
       <div className="top-header-right">
        
-        <a href="#"><FaWhatsapp/></a>
+        <a href="https://wa.me/233553076529?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20legal%20services." 
+         target="_blank" 
+       rel="noreferrer"
+        ><FaWhatsapp/></a>
       </div>
     </div>
   )

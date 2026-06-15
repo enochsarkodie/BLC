@@ -28,12 +28,14 @@ const Home = () => {
        <Testimonials />
       </Element>
 
+      <ClientReason setPlayState={setPlayState} />
+      <VideoPlayer playState={playState} setPlayState={setPlayState}/>
+
      <Element name="contact" id="contact-section">
       <Contact />
       </Element>
 
-      <ClientReason setPlayState={setPlayState} />
-      <VideoPlayer playState={playState} setPlayState={setPlayState}/>
+
     </>
   );
 };

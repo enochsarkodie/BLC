@@ -1,9 +1,9 @@
 .top-header {
-  background: white;
-  box-shadow: 0 0 8px rgba(4, 83, 163, 0.2);
-  color: #000;
-  font-size: 14px;
-  padding: 18px 65px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(4, 83, 163, 0.1);
+  color: #444;
+  font-size: 13px;
+  padding: 10px 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,7 +11,7 @@
 
 .top-header-left {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -19,57 +19,87 @@
 .top-item {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 14px;
+  gap: 7px;
+  font-size: 13px;
   white-space: nowrap;
+  color: #555;
 }
 
+.top-header-icons {
+  font-size: 14px;
+  color: #25618f;
+  flex-shrink: 0;
+}
+
+.header-phone {
+  font-weight: 700;
+  color: #25618f;
+}
+
+/* WhatsApp button */
 .top-header-right {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   align-items: center;
 }
 
 .top-header-right a {
-  color: #2b3a7b;
-  transition: color 0.3s;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #25d366;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  transition: background 0.25s ease, transform 0.2s ease;
 }
 
-.top-header-right a:hover { color: #0e2798; }
-
-.top-header-icons {
+.top-header-right a svg {
   font-size: 15px;
-  color: #1586f5;
-  flex-shrink: 0;
 }
 
-.header-phone { font-weight: 800; }
+.top-header-right a::after {
+  content: 'Chat with us';
+}
 
+.top-header-right a:hover {
+  background: #1ebe5d;
+  transform: translateY(-1px);
+}
 
-/* ── TABLET (hide working hours, tighten padding) ── */
+/* ── TABLET ── */
 @media (max-width: 1024px) {
   .top-header {
-    padding: 12px 32px;
+    padding: 10px 32px;
   }
-  /* hide the hours item on tablet — too cramped */
-  .top-item:last-child {
+  .top-item:last-of-type {
     display: none;
   }
 }
 
-/* ── SMALL TABLET (hide phone number too, keep email) ── */
+/* ── SMALL TABLET ── */
 @media (max-width: 768px) {
   .top-header {
-    padding: 10px 20px;
+    padding: 9px 20px;
   }
-  /* keep only email + socials */
   .top-item:not(:first-child) {
     display: none;
   }
+  /* shrink button to icon only */
+  .top-header-right a::after {
+    display: none;
+  }
+  .top-header-right a {
+    padding: 6px 8px;
+    border-radius: 50%;
+  }
 }
 
-/* ── MOBILE (hide entire top bar) ── */
+/* ── MOBILE ── */
 @media (max-width: 540px) {
   .top-header {
     display: none;
